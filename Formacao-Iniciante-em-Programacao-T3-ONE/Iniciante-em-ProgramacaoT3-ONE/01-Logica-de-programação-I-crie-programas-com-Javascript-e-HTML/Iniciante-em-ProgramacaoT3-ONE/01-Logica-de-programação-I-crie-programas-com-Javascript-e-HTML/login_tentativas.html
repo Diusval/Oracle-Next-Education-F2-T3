@@ -4,21 +4,25 @@
     var loginCadastrado = "alura";
     var senhaCadastrada = "alura321";
 
-    var loginInformado = prompt("Informe seu login");
-    var senhaInformada = prompt("Informe sua senha");
+    var maximoTentativa = 3;
+    var tentativaAtual = 0;
 
-    contador = 0
+    while(tentativaAtual < maximoTentativa){
 
-  while(contador <= 3){
+      var loginInformado = prompt("Informe seu login");
+      var senhaInformada = prompt("Informe sua senha"); 
+
     if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
 
         alert("Bem-vindo ao sistema " + loginInformado);
-      } else {
+
+        tentativaAtual = maximoTentativa
+
+    } else {
 
         alert("Login inválido. Tente novamente");
-      }
-      contador = contador + 1
-  }
-      
 
+        tentativaAtual = tentativaAtual + 1
+    }
+    }
 </script>
