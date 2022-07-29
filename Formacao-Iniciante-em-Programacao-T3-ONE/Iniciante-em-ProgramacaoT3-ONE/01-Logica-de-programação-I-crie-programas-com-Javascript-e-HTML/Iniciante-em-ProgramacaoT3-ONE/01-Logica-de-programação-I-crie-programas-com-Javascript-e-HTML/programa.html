@@ -2,27 +2,33 @@
 
 <script>
 
-  //Função Pular linha
-  function pulaLinha(){
+// Função para pular linha
+  function pularLinha() {
 
-    document.write("<br><br>");
-
-  }
-
-  //Função Document.write();
-  function mostra(frase){
-
-    document.write(frase);
-    pulaLinha();
+      document.write("<br>");
 
   }
 
-  var ano = 2022
-  mostra("Flávio tem " + (ano - 1977) + " anos.");
+// Função document.write();
+  function mostra(nome_e_idade_da_pessoa){
 
-  mostra("Joaquim tem " + (ano - 1996) + " anos.");
+      document.write(nome_e_idade_da_pessoa);
+
+  }
+
+  var ano = 2022;
+  
+
+  mostra("Flávio tem: " + (ano - 1977) +" anos.");
+
+  pularLinha();
+
+  mostra("Joaquim tem: " + (ano - 1996) + " anos.");
+
+  pularLinha();
 
   ano = 2023
-  mostra("Barney tem " + (ano - 1976) + " anos.")
+
+  mostra("Barney tem: " + (ano -1976) + " anos.");
 
 </script>
