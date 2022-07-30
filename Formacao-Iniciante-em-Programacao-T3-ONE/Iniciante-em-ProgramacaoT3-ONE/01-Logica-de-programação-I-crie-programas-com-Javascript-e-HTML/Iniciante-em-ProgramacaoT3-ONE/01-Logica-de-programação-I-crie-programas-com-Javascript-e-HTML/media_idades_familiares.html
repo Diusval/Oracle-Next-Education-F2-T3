@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<script>
+
+//Função Pular linha
+function pulaLinha(){
+document.write("<br><br>");
+}
+
+//Função Document.write();
+function mostra(frase){
+document.write(frase);
+pulaLinha();
+}
+
+var totalFamiliares = parseInt(prompt("Quantidade de familiares: "));
+
+while(isNaN(totalFamiliares)){
+
+  totalFamiliares = parseInt(prompt("Quantidade de familiares: "));
+
+}
+
+var contador = 1;
+var totalIdades = 0;
+
+while(contador <= totalFamiliares){
+
+  var idade = parseInt(prompt("Informe a idade do familiar: "));
+  totalIdades = totalIdades + idade;
+  contador++;
+
+}
+var midiaDasIdades = totalIdades / totalFamiliares;
+
+mostra("A média das idades dos familiares é: " + midiaDasIdades);
+
+mostra("FIM");
+
+
+</script>
