@@ -2,23 +2,25 @@
 
 <script>
 
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
-    pincel.fillStyle = 'lightgray';
-    pincel.fillRect(0, 0, 600, 400);
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
 
-    function desenhaCirculo(x, y, raio, cor) {
+pincel.fillStyle = "Grey";
+pincel.fillRect(0, 0, 600, 400);
 
-        pincel.fillStyle = cor;
-        pincel.beginPath();
-        pincel.arc(x, y, raio, 0, 2*3.14);
-        pincel.fill();
-    }
+function desenhaCirculo(evento){
+  
+  var x = evento.pageX - tela.offsetLeft + 1; //Coloquei + 1 poque ele conta de 0 à 599.
+  var y = evento.pageY - tela.offsetTop + 1; //Coloquei + 1 poque ele conta de 0 à 399.
 
-    desenhaCirculo(300, 200, 50, "red");
-    desenhaCirculo(300, 100, 50, "yellow");
-    desenhaCirculo(300, 300, 50, "blue");
-    desenhaCirculo(200, 200, 50, "orange");
-    desenhaCirculo(400, 200, 50, "black");
-    
+  //Bola
+  pincel.fillStyle = "blue";
+  pincel.beginPath();
+  pincel.arc(x, y, 10, 0, 2 * 3.14);
+  pincel.fill();
+  
+}
+
+tela.onclick = desenhaCirculo;
+
 </script>
