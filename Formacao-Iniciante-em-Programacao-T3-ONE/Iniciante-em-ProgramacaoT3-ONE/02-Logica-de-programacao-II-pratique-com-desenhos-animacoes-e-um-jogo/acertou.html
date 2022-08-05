@@ -2,10 +2,10 @@
 
 <script>
 
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
 
-    pincel.fillStyle = 'lightgray';
+    pincel.fillStyle = "lightgray";
     pincel.fillRect(0, 0, 600, 400);
 
     var raio = 10;
@@ -18,9 +18,9 @@
         pincel.fill();
     }
 
-    desenhaCirculo(300,200, raio + 20, 'red');
-    desenhaCirculo(300,200, raio + 10, 'white');
-    desenhaCirculo(300,200, raio, 'red');
+    desenhaCirculo(300,200, raio + 20, "red");
+    desenhaCirculo(300,200, raio + 10, "white");
+    desenhaCirculo(300,200, raio, "red");
 
     function dispara(evento) {
 
@@ -32,7 +32,7 @@
             && y > 200 - raio
               && y < 200 + raio){
 
-        alert("Acertou");
+        alert("Acertou!!!");
 
       }
 
