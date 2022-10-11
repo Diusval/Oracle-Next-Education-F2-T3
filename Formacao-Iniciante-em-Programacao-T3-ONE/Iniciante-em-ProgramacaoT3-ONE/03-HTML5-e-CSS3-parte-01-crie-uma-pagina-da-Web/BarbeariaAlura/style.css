@@ -167,6 +167,20 @@ td, th {
   clear: left;
 }
 
+/*
+.titulo-principal::first-letter {
+  font-weight: bold;
+}
+
+.titulo-principal::before {
+  content: " [";
+}
+
+.titulo-principal::after {
+content: " ]";
+}
+*/
+
 .principal {
   padding: 3em 0;
   background: #FEFEFE;
@@ -236,6 +250,10 @@ TODOS OS ELEMENTOS PARES
   width: 40%;
   display: inline-block;
   vertical-align: top;
+}
+
+.itens::before {
+  content: "🟊";
 }
 
 .imagem-beneficios {
